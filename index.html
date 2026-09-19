@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lawrence Martins | Marketing Automation, Funnels &amp; Email Specialist</title>
-<meta name="description" content=" Lawrence Martins helps businesses build marketing funnels, email campaigns, CRM workflows, and automation systems that turn attention into measurable customer journeys.">
+<meta name="description" content="Lawrence Martins helps businesses build marketing funnels, email campaigns, CRM workflows, and automation systems that turn attention into measurable customer journeys.">
 <meta name="author" content="Lawrence Martins">
 <meta name="theme-color" content="#4F46E5">
 
@@ -143,16 +143,17 @@ ul,ol{margin:0;padding:0}
 
 @media (max-width:860px){
   .menu-btn{
-    display:inline-flex;align-items:center;gap:.5rem;background:var(--surface);
-    border:1px solid var(--line-strong);border-radius:8px;padding:.55rem .8rem;
-    font:600 .88rem var(--f-body);color:var(--head);cursor:pointer;
+    display:inline-grid;place-items:center;width:44px;height:44px;padding:0;
+    background:var(--surface);border:1px solid var(--line-strong);border-radius:10px;
+    color:var(--head);cursor:pointer;
   }
-  .menu-btn .bars{width:16px;height:10px;position:relative;display:inline-block}
-  .menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;right:0;height:2px;background:currentColor;border-radius:2px;transition:transform .2s ease,top .2s ease}
-  .menu-btn .bars::before{top:1px}
-  .menu-btn .bars::after{top:7px}
-  .menu-btn[aria-expanded="true"] .bars::before{top:4px;transform:rotate(45deg)}
-  .menu-btn[aria-expanded="true"] .bars::after{top:4px;transform:rotate(-45deg)}
+  .menu-btn .bars{position:relative;display:block;width:20px;height:2px;border-radius:2px;background:currentColor;transition:background-color .15s ease}
+  .menu-btn .bars::before,.menu-btn .bars::after{content:"";position:absolute;left:0;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s ease,top .2s ease}
+  .menu-btn .bars::before{top:-6px}
+  .menu-btn .bars::after{top:6px}
+  .menu-btn[aria-expanded="true"] .bars{background:transparent}
+  .menu-btn[aria-expanded="true"] .bars::before{top:0;transform:rotate(45deg)}
+  .menu-btn[aria-expanded="true"] .bars::after{top:0;transform:rotate(-45deg)}
 
   .js .menu{display:none}
   .js .menu.open{display:flex}
@@ -175,7 +176,16 @@ ul,ol{margin:0;padding:0}
 /* ---------------- hero ---------------- */
 .hero{padding-top:clamp(3.5rem,8vw,6.5rem);padding-bottom:clamp(4rem,8vw,6.5rem)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,5rem);align-items:center}
-@media (max-width:920px){.hero-grid{grid-template-columns:1fr}}
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:0}
+  .hero-copy{display:contents}
+  .hero-copy .eyebrow{order:1}
+  .hero-copy h1{order:2}
+  .hero-grid .system{order:3;margin-top:2rem}
+  .hero-copy .hero-lede{order:4;margin-top:2rem}
+  .hero-copy .hero-actions{order:5}
+  .hero-copy .trust{order:6}
+}
 .eyebrow{font-size:.8rem;font-weight:600;color:var(--indigo-ink);letter-spacing:.06em;margin-bottom:1.3rem;display:flex;flex-wrap:wrap;gap:.35rem .75rem}
 .eyebrow span + span{padding-left:.75rem;border-left:1px solid var(--line-strong)}
 .hero h1{font-size:clamp(2.45rem,6.2vw,4.5rem);font-weight:800;letter-spacing:-.035em;word-spacing:.04em;line-height:1.04;max-width:13ch}
@@ -438,7 +448,7 @@ details.dd summary:hover{color:var(--indigo-deep)}
 <header class="header">
   <div class="wrap header-inner">
     <a class="wordmark" href="#top" aria-label="Lawrence Martins, back to top">Lawrence Martins</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="bars" aria-hidden="true"></span></button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>
     <nav class="menu" id="menu" aria-label="Main">
       <ul>
         <li><a href="#work">Work</a></li>
@@ -457,11 +467,18 @@ details.dd summary:hover{color:var(--indigo-deep)}
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow"><span>Marketing systems</span><span>Automation</span><span>Funnels</span></p>
         <h1>Marketing systems that turn attention into action.</h1>
+        <p class="hero-lede">I'm Lawrence Martins. I help businesses build clearer offers, stronger customer journeys, and practical systems that attract, nurture, and convert the right people.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Discuss a project</a>
+          <a class="btn btn-secondary" href="#work">View selected work</a>
+        </div>
+        <p class="trust">I'm based in Lagos, Nigeria, and I work with clients remotely.</p>
+      </div>
 
-                <div class="system">
+      <div class="system">
         <figure class="portrait">
           <img src="lawrence-martins-headshot.jpg" width="358" height="358"
                alt="Lawrence Martins, marketing automation and funnel specialist based in Lagos, Nigeria."
@@ -477,16 +494,6 @@ details.dd summary:hover{color:var(--indigo-deep)}
             <li><span>Analytics</span></li>
           </ol>
         </div>
-
-          
-        <p class="hero-lede">I'm Lawrence Martins. I help businesses build clearer offers, stronger customer journeys, and practical systems that attract, nurture, and convert the right people.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Discuss a project</a>
-          <a class="btn btn-secondary" href="#work">View selected work</a>
-        </div>
-        <p class="trust">I'm based in Lagos, Nigeria, and I work with clients remotely.</p>
-      </div>
-
       </div>
     </div>
   </section>
@@ -971,11 +978,13 @@ details.dd summary:hover{color:var(--indigo-deep)}
 <script>
 (function(){
   var btn=document.querySelector('.menu-btn'), menu=document.getElementById('menu');
-  function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}
-  btn.addEventListener('click',function(){
-    var open=menu.classList.toggle('open');
+  function set(open){
+    menu.classList.toggle('open',open);
     btn.setAttribute('aria-expanded',open?'true':'false');
-  });
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  }
+  function close(){set(false);}
+  btn.addEventListener('click',function(){ set(!menu.classList.contains('open')); });
   menu.addEventListener('click',function(e){ if(e.target.closest('a')) close(); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape' && menu.classList.contains('open')){close();btn.focus();} });
   window.matchMedia('(min-width:861px)').addEventListener('change',function(m){ if(m.matches) close(); });
