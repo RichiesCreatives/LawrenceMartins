@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://richiescreatives.github.io/sitemap.xml
+Sitemap: https://richiescreatives.github.io/LawrenceMartins/sitemap.xml
