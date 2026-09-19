@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="NuqBzUjSmhhWv05fhMWhqn7JfxP0GSDaZyUJr1fJVL8" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lawrence Martins | Marketing Automation, Funnels &amp; Email Specialist</title>
@@ -41,8 +40,8 @@
   "name": "Lawrence Martins",
   "jobTitle": "Marketing & Automation Specialist",
   "description": "Marketing and automation specialist who builds funnels, email and lifecycle campaigns, CRM workflows and automation systems.",
-  "url": "https://richiescreatives.github.io/",
-  "image": "https://richiescreatives.github.io/lawrence-martins-headshot.jpg",
+  "url": "https://YOUR-SITE-URL/",
+  "image": "https://YOUR-SITE-URL/lawrence-martins-headshot.jpg",
   "email": "mailto:lawrencemartins8596@gmail.com",
   "telephone": "+2349027327345",
   "address": {
@@ -58,7 +57,9 @@
   "knowsAbout": [
     "Marketing automation", "Email marketing", "Lifecycle marketing", "Marketing funnels",
     "Webinar funnels", "CRM workflows", "GoHighLevel", "Make.com", "Klaviyo",
-    "Product marketing", "Go-to-market strategy", "Brand strategy"
+    "Product marketing", "Go-to-market strategy", "Brand strategy",
+    "API integration", "SMS automation", "Local SEO", "Google Business Profile",
+    "Marketing education"
   ],
   "sameAs": [
     "https://x.com/marphynz",
@@ -249,7 +250,8 @@ ul,ol{margin:0;padding:0}
   display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);
   padding:clamp(1.4rem,3vw,2.4rem);border:1px solid var(--line);border-radius:14px;background:var(--ground);
 }
-.project--wide{grid-template-columns:1fr}
+.project--wide{grid-template-columns:minmax(0,1fr)}
+.project,.project > *,.how-body{min-width:0}
 @media (max-width:880px){.project{grid-template-columns:1fr}}
 .cats{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin-bottom:1rem}
 .cats li{font-size:.76rem;font-weight:600;color:var(--indigo-ink);background:var(--indigo-wash);border-radius:999px;padding:.3rem .7rem;line-height:1.2}
@@ -318,6 +320,57 @@ ul,ol{margin:0;padding:0}
 /* brand set */
 .brandset{list-style:none;display:flex;flex-wrap:wrap;gap:.2rem 1.1rem;margin-bottom:1.2rem}
 .brandset li{font-family:var(--f-head);font-weight:700;font-size:clamp(1.15rem,2vw,1.4rem);letter-spacing:-.02em;color:var(--head)}
+
+/* feature case study */
+.project--feature{gap:clamp(1.6rem,3vw,2.2rem);border-color:var(--line-strong)}
+.feature-top{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+@media (max-width:880px){.feature-top{grid-template-columns:1fr}}
+.tagline{font-family:var(--f-head);font-weight:600;font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--indigo-ink);margin:-.35rem 0 1rem;letter-spacing:-.01em}
+.project--feature .copy{max-width:44rem}
+.facts--side{margin-top:0}
+@media (min-width:881px){.facts--side{margin-top:2.6rem}}
+
+.stats{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+@media (max-width:880px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats li{padding:1.1rem 1rem 1.2rem 0;display:flex;flex-direction:column;gap:.3rem}
+.stats li + li{padding-left:1rem;border-left:1px solid var(--line)}
+@media (max-width:880px){
+  .stats li:nth-child(3){padding-left:0;border-left:0}
+  .stats li:nth-child(n+3){border-top:1px solid var(--line)}
+}
+.stat-n{font-family:var(--f-head);font-weight:800;font-size:clamp(1.7rem,3vw,2.3rem);letter-spacing:-.035em;color:var(--head);line-height:1}
+.stat-l{font-size:.84rem;color:var(--muted);line-height:1.4}
+.stats-note{font-size:.8rem;color:var(--muted);margin-top:-.9rem}
+
+.feature-body{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3rem);align-items:start}
+@media (max-width:880px){.feature-body{grid-template-columns:1fr}}
+.streams{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+@media (max-width:560px){.streams{grid-template-columns:1fr}}
+.stream{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem}
+.stream h4{font-size:.98rem;font-weight:700;margin-bottom:.45rem;letter-spacing:-.01em}
+.stream p{font-size:.88rem;color:var(--muted);line-height:1.55}
+
+details.dd{border-top:1px solid var(--line);padding-top:1rem}
+details.dd summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.92rem;color:var(--indigo-ink)}
+details.dd summary::-webkit-details-marker{display:none}
+details.dd summary::before{content:"+";display:grid;place-items:center;width:1.3rem;height:1.3rem;border:1px solid var(--line-strong);border-radius:6px;font-weight:600;line-height:1;background:var(--surface)}
+details.dd[open] summary::before{content:"\2013"}
+details.dd summary:hover{color:var(--indigo-deep)}
+.how-body{margin-top:1.3rem;max-width:52rem}
+.how-body h4{font-size:1rem;font-weight:700;margin:1.5rem 0 .5rem}
+.how-body h4:first-child{margin-top:0}
+.how-body p{font-size:.93rem;color:var(--body)}
+.table-scroll{overflow-x:auto;margin-top:.8rem;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.routes{border-collapse:collapse;width:100%;min-width:520px;font-size:.86rem}
+.routes th{text-align:left;font-weight:600;color:var(--head);background:var(--ground);padding:.65rem .8rem;border-bottom:1px solid var(--line)}
+.routes td{padding:.7rem .8rem;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted)}
+.routes tr:last-child td{border-bottom:0}
+.routes td:nth-child(2){color:var(--head);font-weight:600;white-space:nowrap}
+.how-steps{padding-left:1.2rem;font-size:.93rem}
+.how-steps li{margin-bottom:.6rem;padding-left:.2rem}
+.how-steps b{color:var(--head)}
+
+.cats li.personal{background:var(--head);color:#fff}
 
 /* ---------------- process ---------------- */
 .steps{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));counter-reset:step;position:relative}
@@ -503,6 +556,92 @@ ul,ol{margin:0;padding:0}
       </div>
 
       <div class="projects">
+
+        <!-- 0 Power washing (client kept anonymous) -->
+        <article class="project project--wide project--feature" id="power-washing-automation">
+          <div class="feature-top">
+            <div>
+              <ul class="cats"><li>Marketing automation</li><li>API integration</li><li>Local SEO</li><li>SMS automation</li></ul>
+              <h3>Power Washing &amp; Exterior Cleaning, South Florida</h3>
+              <p class="tagline">Connecting CRM, SMS and field photos into one automated customer journey.</p>
+              <p class="need">The business had a strong reputation, with a 4.8-star rating and 50+ Google reviews, but a disconnected operation. Leads, field photos, invoices and payments lived in separate places, and the website and Google profile weren't working as hard as they could.</p>
+              <p class="copy">Lawrence audited the website, Google profile and customer journey, then built the automation connecting the CRM, SMS outreach and the crew's field photo app. Leads are sorted by intent, opt-outs are handled automatically, and finished-job photos and payment updates reach the customer record without anyone copying them over.</p>
+            </div>
+            <dl class="facts facts--side">
+              <div><dt>Role</dt><dd>Digital Marketing &amp; Automations Consultant</dd></div>
+              <div><dt>Timeline</dt><dd>July to August 2026</dd></div>
+              <div><dt>Tools</dt><dd>GoHighLevel, Make.com, CompanyCam, Sendivo, Google Business Profile, CompanyCam and GoHighLevel APIs</dd></div>
+            </dl>
+          </div>
+
+          <ul class="stats" aria-label="Delivered outcomes">
+            <li><span class="stat-n">2,443</span><span class="stat-l">contacts enrolled in the SMS lead-intake workflow</span></li>
+            <li><span class="stat-n">5,446</span><span class="stat-l">contacts through the automated opt-out workflow</span></li>
+            <li><span class="stat-n">9</span><span class="stat-l">audit findings, each with a fix and a named owner</span></li>
+            <li><span class="stat-n">3</span><span class="stat-l">Make.com flows replacing manual photo-sending and pipeline updates</span></li>
+          </ul>
+          <p class="stats-note">Enrolled means contacts that passed through a workflow, not sales. Both workflows are live and published.</p>
+
+          <div class="feature-body">
+            <div class="streams">
+              <div class="stream">
+                <h4>Website SEO audit</h4>
+                <p>A prioritized action report: 2 high-priority issues, 2 medium, 1 notice and 4 items already optimized. Each came with why it matters, a step-by-step fix and an owner, with high and medium fixes due before social traffic started.</p>
+              </div>
+              <div class="stream">
+                <h4>Google Business Profile sprint</h4>
+                <p>A two-week plan: reply to every unanswered review, swap the SMS-only booking link for a tracked GoHighLevel booking page, tighten categories and services, add FAQ content, and set weekly posts, post-job review requests and monthly tracking.</p>
+              </div>
+              <div class="stream">
+                <h4>SMS lead intake and opt-outs</h4>
+                <p>Two GoHighLevel workflows fed by Sendivo. Replies are routed by intent, with the team alerted instantly, and anyone who opts out is set to Do Not Disturb and removed from every workflow automatically.</p>
+              </div>
+              <div class="stream">
+                <h4>Crew documentation SOP</h4>
+                <p>A field standard with a truck checklist: one project per address, matched before and after photos, logged pre-existing damage, and a clear definition of done. The "Completed" label is what triggers the automation.</p>
+              </div>
+            </div>
+
+            <figure class="panel">
+              <figcaption>End-to-end job journey</figcaption>
+              <ol class="flow">
+                <li><span class="box"><b>Opportunity advances</b><small>Pipeline stage changes in GoHighLevel</small></span></li>
+                <li><span class="box"><b>Project created</b><small>Make.com opens it in CompanyCam, named by address</small></span></li>
+                <li><span class="box"><b>Crew documents the job</b><small>Paired before and after photos, per the SOP</small></span></li>
+                <li><span class="box"><b>Labelled Completed</b><small>CompanyCam webhook notifies Make.com</small></span></li>
+                <li><span class="box"><b>Photos sent to customer</b><small>By MMS through GoHighLevel conversations</small></span></li>
+                <li><span class="box"><b>Payment received</b><small>Pipeline updates itself when payment clears</small></span></li>
+              </ol>
+            </figure>
+          </div>
+
+          <details class="dd how">
+            <summary>How the automation works</summary>
+            <div class="how-body">
+              <h4>SMS lead intake</h4>
+              <p>An inbound Sendivo webhook triggers the workflow, and a condition step reads the reply and routes it:</p>
+              <div class="table-scroll">
+                <table class="routes">
+                  <thead><tr><th scope="col">Reply</th><th scope="col">Route</th><th scope="col">What happens</th></tr></thead>
+                  <tbody>
+                    <tr><td>Contains "yes"</td><td>Interested</td><td>Contact created, reply logged, tagged, opportunity created or updated, automated reply sent, team alerted by email, in-app notification and SMS</td></tr>
+                    <tr><td>Contains "text"</td><td>Text follow-up</td><td>Contact created, reply logged, tagged, follow-up text sent, team alerted</td></tr>
+                    <tr><td>Contains "not interested"</td><td>Not interested</td><td>Routed to the tagging path</td></tr>
+                    <tr><td>No match</td><td>Fallback</td><td>Tagged and added to a follow-up workflow</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <h4>Opt-outs</h4>
+              <p>When a contact is tagged as blocked, the workflow turns on Do Not Disturb, adds a DND tag and removes the contact from every workflow, so no one who said no is messaged again.</p>
+              <h4>Make.com integration</h4>
+              <ol class="how-steps">
+                <li><b>Pipeline to project.</b> When an opportunity reaches the right stage, Make.com creates the matching CompanyCam project.</li>
+                <li><b>Completed to customer.</b> Make.com registers a CompanyCam webhook for the "Completed" label, fetches the project's photos through the CompanyCam API, and sends the web-sized versions to the customer as MMS through the GoHighLevel Conversations API.</li>
+                <li><b>Payment to pipeline.</b> When a payment clears, Make.com moves the opportunity to Payment Received.</li>
+              </ol>
+            </div>
+          </details>
+        </article>
 
         <!-- 1 Solaris -->
         <article class="project" id="solaris-health">
@@ -703,6 +842,28 @@ ul,ol{margin:0;padding:0}
           </figure>
         </article>
 
+        <!-- 9 RichiesPlatform (personal project) -->
+        <article class="project" id="richiesplatform">
+          <div>
+            <ul class="cats"><li class="personal">Personal project</li><li>Community building</li><li>Marketing education</li></ul>
+            <h3>RichiesPlatform</h3>
+            <p class="need">Systems only last if the people running them understand how they work, and too many teams depend on the person who built them.</p>
+            <p class="copy">RichiesPlatform is Lawrence's community for developing marketing experts who can deliver real industry results, both in their careers and as entrepreneurs in their own businesses. It's also how he trains teams to manage the solutions he builds sustainably, without relying entirely on him or his technical team.</p>
+            <dl class="facts">
+              <div><dt>Role</dt><dd>Founder and educator</dd></div>
+              <div><dt>Teaches</dt><dd>Digital marketing and automation concepts</dd></div>
+            </dl>
+          </div>
+          <figure class="panel">
+            <figcaption>From learning to ownership</figcaption>
+            <ol class="flow">
+              <li><span class="box"><b>Learn</b><small>Digital marketing and automation concepts</small></span></li>
+              <li><span class="box"><b>Apply</b><small>Real industry work, for careers and own businesses</small></span></li>
+              <li><span class="box"><b>Run it</b><small>Teams manage the systems without depending on the builder</small></span></li>
+            </ol>
+          </figure>
+        </article>
+
       </div>
     </div>
   </section>
@@ -742,7 +903,8 @@ ul,ol{margin:0;padding:0}
           <h2 id="about-h">A marketer who understands the system behind the message.</h2>
         </div>
         <p>Lawrence Martins is a marketing and automation specialist based in Lagos, Nigeria. His experience spans product marketing, email marketing, marketing automation, funnel building, webinar systems, CRM workflows, social-media operations, brand strategy, and AI-assisted business processes.</p>
-        <p>He has worked remotely with businesses across marketing, wellness, real estate, ecommerce, education, care, and professional services.</p>
+        <p>He has worked remotely with businesses across marketing, wellness, real estate, ecommerce, education, care, home services, and professional services.</p>
+        <p>He is also an educator who trains people on digital marketing and automation concepts. Through RichiesPlatform, his community of marketing practitioners, he prepares teams to run the systems they depend on themselves.</p>
         <p class="diff">An engineering degree and hands-on marketing work mean Lawrence thinks about the customer, the campaign, the workflow, and the system underneath it together.</p>
       </div>
 
@@ -757,8 +919,12 @@ ul,ol{margin:0;padding:0}
             <dd><ul><li>SharePoint site customization</li><li>Web analytics</li><li>AI cold email and lead generation</li></ul></dd>
           </div>
           <div>
+            <dt>Teaches</dt>
+            <dd>Digital marketing and automation concepts</dd>
+          </div>
+          <div>
             <dt>Tools he builds with</dt>
-            <dd>GoHighLevel, Make.com, Klaviyo, Airtable, SimplyBook.me, WebinarJam, Gmail, OpenAI</dd>
+            <dd>GoHighLevel, Make.com, CompanyCam, Sendivo, Klaviyo, Airtable, SimplyBook.me, WebinarJam, Gmail, OpenAI</dd>
           </div>
           <div>
             <dt>Location</dt>
@@ -775,7 +941,7 @@ ul,ol{margin:0;padding:0}
       <div class="contact-grid">
         <div>
           <h2 id="contact-h">Have a marketing system that needs to work better?</h2>
-          <p class="lead">Tell Lawrence what you are trying to launch, improve, or automate. He can help you find the right next step, whether that's a funnel, lifecycle campaign, CRM workflow, product-marketing plan, content system, or automation build.</p>
+          <p class="lead">Tell Lawrence what you are trying to launch, improve, or automate. He can help you find the right next step, whether that's a funnel, lifecycle campaign, CRM workflow, product-marketing plan, content system, automation build, or training so your team can run it.</p>
           <a class="btn btn-primary"
              href="mailto:lawrencemartins8596@gmail.com?subject=Project%20enquiry&amp;body=Hi%20Lawrence%2C%0A%0AName%3A%20%0ACompany%3A%20%0AProject%20type%3A%20%0ACurrent%20tools%3A%20%0AWhat%20I%20want%20to%20achieve%3A%20%0ATimeline%3A%20%0A">Start a conversation</a>
           <p class="hint">Opens an email with a few prompts so you can describe the project.</p>
